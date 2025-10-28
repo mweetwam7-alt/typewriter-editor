@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Typewrite</title>
+  <title>Typewriter Editor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="editor" contenteditable="true"></div>
+  <div id="login">
+  <h2>Login</h2>
+  <input type="password" id="password" placeholder="Enter password" />
+  <br />
+  <label>
+    <input type="checkbox" id="rememberMe" />
+    Remember me
+  </label>
+  <br />
+  <button onclick="checkPassword()">Login</button>
+  <p id="error" style="color:red;"></p>
+</div>  
+
+  <div id="editor" contenteditable="true" style="display:none;"></div>
+<button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+
+
   <audio id="typeSound" src="typewriter-key.mp3" preload="auto"></audio>
   <audio id="carriageSound" src="typewriter-carriage.wav" preload="auto"></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
+
